@@ -8,3 +8,7 @@ npm run dev
 ```
 
 https://vuepress.vuejs.org/guide/getting-started.html#quick-start
+
+# Deploy
+
+https://vuepress.vuejs.org/guide/deploy.html#github-pages
