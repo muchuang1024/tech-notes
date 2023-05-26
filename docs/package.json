@@ -1,0 +1,19 @@
+{
+  "name": "vuepress",
+  "version": "0.0.1",
+  "description": "在线文档网站",
+  "main": "index.js",
+  "authors": {
+    "name": "caspar",
+    "email": "caijinlin2012@gmail.com"
+  },
+  "repository": "vuepres/vuepress",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
