@@ -34,30 +34,48 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: '工具',
+        items: [
+            {
+                text: '效率提升', 
+                items: [
+                    {text: 'Autojump', link: '/blog/工具/效率提升/autojump/'},
+                    {text: 'Karabiner', link: '/blog/工具/效率提升/karabiner-Elements/'},
+                    {text: 'KeyCastr', link: '/blog/工具/效率提升/KeyCastr/'},
+                    {text: 'Item2', link: '/blog/工具/效率提升/item2/'},
+                    {text: 'Zsh', link: '/blog/工具/效率提升/zsh/'},
+                    {text: 'Tmux', link: '/blog/工具/效率提升/tmux/'},
+                ]
+            },
+            {
+                text: '编程开发', 
+                items: [
+                    {text: 'Vim', link: '/blog/工具/编程开发/vim/'},
+                ]
+            },
+            {
+                text: '通用软件', 
+                items: [
+                    {text: 'Notion', link: '/blog/工具/通用软件/Notion/'},
+                    {text: 'Witeboard', link: '/blog/工具/通用软件/Witeboard/'},
+                    {text: '时光序', link: '/blog/工具/通用软件/时光序/'},
+                ]
+            },
+            {
+                text: '通用硬件', 
+                items: [
+                    {text: '笔记本', link: '/blog/工具/通用硬件/笔记本/'},
+                    {text: '键盘', link: '/blog/工具/通用硬件/键盘/'},
+                ]
+            }
+        ]
       },
       {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Github',
+        link: 'https://github.com/caijinlin'
       }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    sidebar: 'auto',
   },
 
   /**
@@ -66,5 +84,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    '@vuepress/plugin-active-header-links'
   ]
 }
