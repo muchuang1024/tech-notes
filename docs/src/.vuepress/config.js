@@ -50,12 +50,17 @@ module.exports = {
             {
                 text: '编程开发', 
                 items: [
+                    {text: 'Mac', link: '/blog/工具/编程开发/mac/'},
+                    {text: 'Linux', link: '/blog/工具/编程开发/linux/'},
                     {text: 'Vim', link: '/blog/工具/编程开发/vim/'},
+                    {text: 'Git', link: '/blog/工具/编程开发/git/'},
+                    {text: 'Sublime', link: '/blog/工具/编程开发/sublime/'},
                 ]
             },
             {
                 text: '通用软件', 
                 items: [
+                    {text: 'Typora', link: '/blog/工具/通用软件/Typora/'},
                     {text: 'Notion', link: '/blog/工具/通用软件/Notion/'},
                     {text: 'Witeboard', link: '/blog/工具/通用软件/Witeboard/'},
                     {text: '时光序', link: '/blog/工具/通用软件/时光序/'},
@@ -64,7 +69,6 @@ module.exports = {
             {
                 text: '通用硬件', 
                 items: [
-                    {text: '笔记本', link: '/blog/工具/通用硬件/笔记本/'},
                     {text: '键盘', link: '/blog/工具/通用硬件/键盘/'},
                 ]
             }
