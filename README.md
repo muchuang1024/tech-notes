@@ -1,20 +1,27 @@
-# Install
+# 技术笔记
+
+## 安装
 
 ```
-npx create-vuepress-site vuepress
+npx create-vuepress-site tech-notes
 cd docs
 npm install
 npm run dev
 ```
 
-https://vuepress.vuejs.org/guide/getting-started.html#quick-start
+> https://vuepress.vuejs.org/guide/getting-started.html#quick-start
 
-# Deploy
-
-https://vuepress.vuejs.org/guide/deploy.html#github-pages
-
-# Content
+## 部署
 
 ```
-ln -s /Users/caijinlin/Code/person/blog docs/src/blog
+cd docs
+sh deploy.sh
+```
+
+> https://vuepress.vuejs.org/guide/deploy.html#github-pages
+
+## 内容
+
+```
+see docs/src/blog
 ```
