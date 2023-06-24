@@ -53,7 +53,9 @@ cascadia-code： https://github.com/microsoft/cascadia-code
 
 ### 平滑移动
 
-1. 开启方式：修改 `系统偏好设置 > 键盘` 更改 **按键重复** 与 **重复前延迟**
+1. 设置开启 `"editor.cursorSmoothCaretAnimation": true`
+
+2. 修改 `系统偏好设置 > 键盘` 更改 **按键重复** 与 **重复前延迟**
 
 ![](https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/image-20230530172150452.png)
 
