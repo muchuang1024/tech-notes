@@ -71,7 +71,7 @@ module.exports = {
           },
           {
             text: '通用硬件',
-            items: [{ text: '键盘', link: '/blog/工具/通用硬件/键盘/' }]
+            items: [{ text: '键盘', link: '/blog/01-工具/通用硬件/键盘/' }]
           }
         ]
       },
