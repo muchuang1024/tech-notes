@@ -44,7 +44,8 @@ module.exports = {
               { text: 'KeyCastr', link: '/blog/01-工具/效率提升/KeyCastr/' },
               { text: 'Item2', link: '/blog/01-工具/效率提升/item2/' },
               { text: 'Zsh', link: '/blog/01-工具/效率提升/zsh/' },
-              { text: 'Tmux', link: '/blog/01-工具/效率提升/tmux/' }
+              { text: 'Tmux', link: '/blog/01-工具/效率提升/tmux/' },
+              { text: 'pnpm', link: '/blog/01-工具/效率提升/pnpm/' }
             ]
           },
           {
@@ -53,6 +54,7 @@ module.exports = {
               { text: 'Mac', link: '/blog/01-工具/编程开发/mac/' },
               { text: 'Linux', link: '/blog/01-工具/编程开发/linux/' },
               { text: 'Chrome', link: '/blog/01-工具/编程开发/chrome/' },
+              { text: 'VsCode', link: '/blog/01-工具/编程开发/vscode/' },
               { text: 'Vim', link: '/blog/01-工具/编程开发/vim/' },
               { text: 'Git', link: '/blog/01-工具/编程开发/git/' },
               { text: 'Sublime', link: '/blog/01-工具/编程开发/sublime/' }
