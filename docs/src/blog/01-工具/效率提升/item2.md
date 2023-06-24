@@ -12,7 +12,13 @@ Iterm2 是苹果系统增加的命令行终端工具，定制化很强使用方�
 
 启动时固定全屏
 
-![](https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/image-20230603181532485.png)
+![](https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/image-20230603181532485.png)\
+
+主题：[**BlulocoDark**](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/BlulocoDark.itermcolors)
+
+首先从https://iterm2colorschemes.com/ 网站提供了丰富的风格包以供下载，然后直接打开即可导入风格包到iterm2，推荐BlulocoDark
+
+![](https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/image-20230618231722404.png)
 
 ## 使用
 

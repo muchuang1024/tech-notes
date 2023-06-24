@@ -1,9 +1,8 @@
-> <<从0开始学架构>> 学习笔记Day11：高可用架构模式-CAP理论
-
+> <<从 0 开始学架构>> 学习笔记 Day11：高可用架构模式-CAP 理论
 
 CAP 定理（CAP theorem）又被称作布鲁尔定理（Brewer's theorem），是加州大学伯克利分校的计算机科学家埃里克·布鲁尔（Eric Brewer）在 2000 年的 ACM PODC 上提出的一个猜想。2002 年，麻省理工学院的赛斯·吉尔伯特（Seth Gilbert）和南希·林奇（Nancy Lynch）发表了布鲁尔猜想的证明，使之成为分布式计算领域公认的一个定理。对于设计分布式系统的架构师来说，CAP 是必须掌握的理论。
 
-# CAP理论
+# CAP 理论
 
 ### C
 
@@ -23,7 +22,7 @@ CAP 定理（CAP theorem）又被称作布鲁尔定理（Brewer's theorem），�
 
 当出现网络分区后，系统能够继续“履行职责”
 
-# CAP应用
+# CAP 应用
 
 1.CP - Consistency/Partition Tolerance
 
@@ -37,9 +36,8 @@ CAP 定理（CAP theorem）又被称作布鲁尔定理（Brewer's theorem），�
 
 ![](https://static001.geekbang.org/resource/image/2c/d6/2ccafe41de9bd7f8dec4658f004310d6.png?wh=334*287)
 
-
 # 总结
 
 虽然 CAP 理论定义是三个要素中只能取两个，但放到分布式环境下来思考，我们会发现必须选择 P（分区容忍）要素，因为网络本身无法做到 100% 可靠，有可能出故障，所以分区是一个必然的现象。如果我们选择了 CA 而放弃了 P，那么当发生分区现象时，为了保证 C，系统需要禁止写入，当有写入请求时，系统返回 error（例如，当前系统不允许写入），这又和 A 冲突了，因为 A 要求返回 no error 和 no timeout。因此，分布式系统理论上不可能选择 CA 架构，只能选择 CP 或者 AP 架构。
 
-在大多数场景下选择AP架构，而一致性是通过最终一致性来妥协实现的
+在大多数场景下选择 AP 架构，而一致性是通过最终一致性来妥协实现的

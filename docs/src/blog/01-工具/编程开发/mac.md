@@ -135,3 +135,14 @@ Markdown编辑器
 
 ## utools
 
+## iSlot
+
+## AutoSwitchInput
+
+自动输入法切换
+
+## todo
+
+开启录制时，倒计时自动开始；停止录制时，倒计时自动结束；配合屏幕录制使用
+
+## Sip
