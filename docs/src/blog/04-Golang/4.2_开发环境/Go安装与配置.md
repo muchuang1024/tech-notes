@@ -28,3 +28,9 @@ source $HOME/.bash_profile
 安装完成后，在终端执行查看版本命令，如果能正确输出版本信息，那就说明安装成功了。
 
 go version
+
+## 使用
+
+ go get github.com/gomodule/redigo@latest
+
+ go get github.com/gomodule/redigo@commit_id
