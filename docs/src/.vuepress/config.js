@@ -77,22 +77,11 @@ module.exports = {
       },
       {
         text: 'MySQL',
-        items: [
-          { text: '基础篇', link: '/blog/05-MySQL/toc/' },
-          { text: '索引篇', link: '/blog/05-MySQL/toc/' },
-          { text: '事务篇', link: '/blog/05-MySQL/toc/' },
-          { text: '锁篇', link: '/blog/05-MySQL/toc/' },
-          { text: '日志篇', link: '/blog/05-MySQL/toc/' }
-        ]
+        link: '/blog/05-MySQL/toc/'
       },
       {
         text: 'Redis',
-        items: [
-          { text: '数据类型篇 ', link: '/blog/06-Redis/toc/' },
-          { text: '持久化篇', link: '/blog/06-Redis/toc/' },
-          { text: '缓存篇', link: '/blog/06-Redis/toc/' },
-          { text: '高可用篇', link: '/blog/06-Redis/toc/' }
-        ]
+        link: '/blog/06-Redis/toc/'
       },
       {
         text: '操作系统',
@@ -112,7 +101,7 @@ module.exports = {
       },
       {
         text: '框架',
-        link: '/blog/08-框架/toc/'
+        link: '/blog/08-框架/'
       },
       {
         text: '架构设计',
@@ -121,9 +110,36 @@ module.exports = {
       {
         text: 'Github',
         link: 'https://github.com/caijinlin'
+      },
+      {
+        text: 'Guide',
+        link: '/guide/'
       }
     ],
-    sidebar: 'auto'
+    sidebar: {
+      '/guide/': [
+        {
+          text: 'Guide',
+          sidebarDepth: 2, // 可选的, 默认值是 1
+          collapsable: false, // 可选的, 默认值是 true,
+          children: ['', '/guide/index1.md', '/guide/index2.md']
+        }
+      ],
+      '/blog/08-框架/': [
+        {
+          text: '框架',
+          sidebarDepth: 2, // 可选的, 默认值是 1
+          collapsable: false, // 可选的, 默认值是 true,
+          children: ['/blog/08-框架/toc.md']
+        },
+        {
+          text: '框架',
+          sidebarDepth: 2, // 可选的, 默认值是 1
+          collapsable: false, // 可选的, 默认值是 true,
+          children: ['']
+        }
+      ]
+    }
   },
 
   /**

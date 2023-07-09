@@ -16,3 +16,5 @@ Option + Command + J: 调试代码
 
 ### vue-devtool
 
+### 划词翻译
+
