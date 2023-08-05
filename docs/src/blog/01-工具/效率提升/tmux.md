@@ -37,7 +37,7 @@ cd ..
 rm -rf fonts
 ```
 
-安装完字体，在item2终端进行设置
+安装完字体，在 item2 终端进行设置
 
 ![](https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/tmux_setting.png)
 
@@ -51,7 +51,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### 安装插件
 
-修改配置文件 ~/.tmux.conf添加以下内容，然后在**tmux**中执行命令`prefix + i`安装插件，prefix指前缀键（默认ctrl + b, tmux所有快捷键都要通过前缀键唤起)
+修改配置文件 ~/.tmux.conf 添加以下内容，然后在**tmux**中执行命令`prefix + I`安装插件(注意大写 I)，prefix 指前缀键（默认 ctrl + b, tmux 所有快捷键都要通过前缀键唤起)
 
 ```
 # theme主题
@@ -128,62 +128,60 @@ Tmux 的最简操作流程:
 
 ### 帮助
 
-* `tmux list-commands` 所有命令
-* `tmux list-keys` 所有快捷键
-* `tmux list-sessions` 所有会话
-* `tmux list-windows` 所有窗口
-* `tmux list-panes` 所有窗格
+- `tmux list-commands` 所有命令
+- `tmux list-keys` 所有快捷键
+- `tmux list-sessions` 所有会话
+- `tmux list-windows` 所有窗口
+- `tmux list-panes` 所有窗格
 
 ### 会话管理 (session)
 
-| shell命令 |    说明   |   快捷键    |
-| -------- | ------ | ------ |
-| tmux ls | 查看所有会话 | |
-| tmux new -s session_name | 新建会话 | |
-| tmux -CC | 新建会话（基于item2操作）|  |
-| tmux attach -t session_name | 进入会话 | |
-| tmux rename-session session_name | 重命名当前会话| ctrl+b $ |
-| tmux switch -t session_name | 切换会话| ctrl+b s |
-| tmux detach|  分离当前会话| ctrl+b d|
-| tmux kill-session| 杀死当前会话 | |
-| tmux kill-session -t session_name| 杀死指定会话 | |
-
+| shell 命令                        | 说明                        | 快捷键   |
+| --------------------------------- | --------------------------- | -------- |
+| tmux ls                           | 查看所有会话                |          |
+| tmux new -s session_name          | 新建会话                    |          |
+| tmux -CC                          | 新建会话（基于 item2 操作） |          |
+| tmux attach -t session_name       | 进入会话                    |          |
+| tmux rename-session session_name  | 重命名当前会话              | ctrl+b $ |
+| tmux switch -t session_name       | 切换会话                    | ctrl+b s |
+| tmux detach                       | 分离当前会话                | ctrl+b d |
+| tmux kill-session                 | 杀死当前会话                |          |
+| tmux kill-session -t session_name | 杀死指定会话                |          |
 
 ### 窗口管理 (window)
 
-| shell命令 |    说明   |   快捷键    |
-| -------- | ------ | ------ |
-| tmux new-window -n window_name | 新建窗口 | ctrl+b c|
-| tmux list-windows | 所有窗口 | |
-| tmux select-window -t window_name | 切换窗口 | |
-|  | 切换到上一个窗口 |ctrl+b p|
-|  | 切换到下一个窗口 |ctrl+b n|
-|  | 切换到指定编号的窗口 |ctrl+b number|
-|  | 切换 |ctrl+b w|
-| tmux rename-window window_name | 重命名当前窗口|ctrl+b ,|
-| tmux kill-window -t window_name | 关闭窗口 |ctrl+b & |
-
+| shell 命令                        | 说明                 | 快捷键        |
+| --------------------------------- | -------------------- | ------------- |
+| tmux new-window -n window_name    | 新建窗口             | ctrl+b c      |
+| tmux list-windows                 | 所有窗口             |               |
+| tmux select-window -t window_name | 切换窗口             |               |
+|                                   | 切换到上一个窗口     | ctrl+b p      |
+|                                   | 切换到下一个窗口     | ctrl+b n      |
+|                                   | 切换到指定编号的窗口 | ctrl+b number |
+|                                   | 切换                 | ctrl+b w      |
+| tmux rename-window window_name    | 重命名当前窗口       | ctrl+b ,      |
+| tmux kill-window -t window_name   | 关闭窗口             | ctrl+b &      |
 
 ### 窗格管理 (pane)
 
-| shell命令 |    说明   |   快捷键    |
-| -------- | ------ | ------ |
-| tmux list-panes | 所有窗格 |  |
-| tmux split-window | 上下分隔窗口得到2个窗格 | ctrl+b "|
-| tmux split-window -h | 左右分隔窗口得到2个窗格 | ctrl+b % |
-| tmux kill-pane | 关闭窗格 | ctrl+b x |
-| tmux select-pane -t 窗格序号 | 切换指定窗格 |  |
-|  | 切换到上一个窗格 | ctrl+b ;|
-|  | 切换并与上一个窗格交换 | ctrl+b o |
-| tmux select-pane -U | 切换到上方窗格 | ctrl+b 方向键 |
-| tmux select-pane -D | 切换到下方窗格 | ctrl+b 方向键 |
-| tmux select-pane -L | 切换到左边窗格 | ctrl+b 方向键 |
-| tmux select-pane -R | 切换到右边窗格 | ctrl+b 方向键 |
-| tmux swap-pane -U | 当前窗格上移 |ctrl+b { |
-| tmux swap-pane -D | 当前窗格下移 |ctrl+b } |
-| tmux swap-pane -D | 当前窗格全屏显示，再使用一次会变回原来大小 |ctrl+b z |
-| | 调整窗格大小 |ctrl+b alt+方向键 |
-|  | 显示窗格编号 |ctrl+b q |
+| shell 命令                   | 说明                                       | 快捷键            |
+| ---------------------------- | ------------------------------------------ | ----------------- |
+| tmux list-panes              | 所有窗格                                   |                   |
+| tmux split-window            | 上下分隔窗口得到 2 个窗格                  | ctrl+b "          |
+| tmux split-window -h         | 左右分隔窗口得到 2 个窗格                  | ctrl+b %          |
+| tmux kill-pane               | 关闭窗格                                   | ctrl+b x          |
+| tmux select-pane -t 窗格序号 | 切换指定窗格                               |                   |
+|                              | 切换到上一个窗格                           | ctrl+b ;          |
+|                              | 切换并与上一个窗格交换                     | ctrl+b o          |
+| tmux select-pane -U          | 切换到上方窗格                             | ctrl+b 方向键     |
+| tmux select-pane -D          | 切换到下方窗格                             | ctrl+b 方向键     |
+| tmux select-pane -L          | 切换到左边窗格                             | ctrl+b 方向键     |
+| tmux select-pane -R          | 切换到右边窗格                             | ctrl+b 方向键     |
+| tmux swap-pane -U            | 当前窗格上移                               | ctrl+b {          |
+| tmux swap-pane -D            | 当前窗格下移                               | ctrl+b }          |
+| tmux swap-pane -D            | 当前窗格全屏显示，再使用一次会变回原来大小 | ctrl+b z          |
+|                              | 调整窗格大小                               | ctrl+b alt+方向键 |
+|                              | 显示窗格编号                               | ctrl+b q          |
 
 ## 效果
 
@@ -192,4 +190,3 @@ Tmux 的最简操作流程:
 ## 我的配置
 
 [tmux.conf](https://github.com/caijinlin/dotfiles/blob/master/tmux/.tmux.conf)
-
