@@ -129,7 +129,7 @@ Markdown编辑器
 
 ## Bob
 
-截图翻译
+截图翻译Bob + OpenL插件
 
 ## 快捷指令
 
@@ -146,3 +146,23 @@ Markdown编辑器
 开启录制时，倒计时自动开始；停止录制时，倒计时自动结束；配合屏幕录制使用
 
 ## Sip
+
+
+
+## Init
+
+brew,wget,git,zsh,on-my-zsh
+
+
+
+## 初始化
+
+安装homebrew
+
+更改光标速度
+
+![](https://img-blog.csdnimg.cn/055dccceab144a18a3bae2cab37dde8c.png)
+
+打开terminal，更改键盘按键重复速度
+
+defaults write NSGloba lDomain KeyRepeat 1

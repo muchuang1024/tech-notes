@@ -16,5 +16,10 @@ Option + Command + J: 调试代码
 
 ### vue-devtool
 
-### 划词翻译
+### pdf-viewer
 
+### monica
+
+### 沉浸式翻译
+
+划词翻译

@@ -15,19 +15,13 @@ sudo tar -zxvf go1.16.6.linux-amd64.tar.gz -C /usr/local
 
 ## 配置
 
-打开 $HOME/.bash_profile 文件，增加下面两行代码：
+设置国内镜像
 
-```
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-```
+go env -w GOPROXY=https://goproxy.cn,direct
 
-最后使环境变量生效：
+查看 go环境变量
 
-source $HOME/.bash_profile
-安装完成后，在终端执行查看版本命令，如果能正确输出版本信息，那就说明安装成功了。
-
-go version
+go env
 
 ## 使用
 
