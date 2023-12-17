@@ -4,9 +4,10 @@
 
 适用于各个应用程序
 
-下面是一些在Mac上常用的快捷键：
+下面是一些在 Mac 上常用的快捷键：
 
 通用快捷键：
+
 - **Command + C**：复制选中的内容
 - **Command + X**：剪切选中的内容
 - **Command + V**：粘贴剪贴板中的内容
@@ -21,12 +22,14 @@
 - **Command + ,** : 应用程序设置
 
 文件和文件夹快捷键：
+
 - **Command + O**：打开选中的文件
 - **Command + P**：打印当前文件
 - **Command + Shift + N**：新建文件夹
 - **Command + Shift + .**：显示或隐藏隐藏文件夹
 
 窗口和应用程序快捷键：
+
 - **Command + M**：最小化当前窗口
 - **Command + Option + H**：隐藏除了当前应用程序外的所有应用程序
 - **Command + Option + Esc**：强制退出当前应用程序
@@ -34,6 +37,7 @@
 - **Command + H**：隐藏当前应用程序的窗口
 
 浏览器快捷键：
+
 - **Command + T**：新建标签页
 - **Command + W**：关闭当前标签页
 - **Command + R**：刷新页面
@@ -62,7 +66,7 @@
 
 截取整个屏幕：command + shift + 3
 
-截取选择区域：command + shift + 4 
+截取选择区域：command + shift + 4
 
 ## 录屏
 
@@ -70,7 +74,7 @@
 
 ## icloud
 
-icloud 内置在每一部 Apple 设备中，每个设备中登录icloud账号，你的照片、文件、备忘录等内容都能得到安全的保护、实时的更新，并随处供你取用。
+icloud 内置在每一部 Apple 设备中，每个设备中登录 icloud 账号，你的照片、文件、备忘录等内容都能得到安全的保护、实时的更新，并随处供你取用。
 
 ## 聚焦搜索
 
@@ -78,13 +82,13 @@ command+空格， 输入搜索关键字，可以搜索应用程序、文档、�
 
 ## 标签
 
-Mac里一切皆可以标记，您可以给文件和文件夹添加标签以便于查找;  临时堆在桌面的工作学习素材，【右键】选中相应标签，不止文件夹，图片、GIF 动图、文件都可以一一分类，等到集中清理的时候，桌面【右键】勾选【使用叠放】-【叠放分组方式】-【标签】，不用费力费时辨认，瞬间完成整理收纳
+Mac 里一切皆可以标记，您可以给文件和文件夹添加标签以便于查找; 临时堆在桌面的工作学习素材，【右键】选中相应标签，不止文件夹，图片、GIF 动图、文件都可以一一分类，等到集中清理的时候，桌面【右键】勾选【使用叠放】-【叠放分组方式】-【标签】，不用费力费时辨认，瞬间完成整理收纳
 
 不同于 Windows 文件夹套娃，Mac 的设计理念更希望你跳脱磁盘、文件夹的限制，用【标签】来个性化定制你自己整理文件资料的方式，【标签】不是对源文件的拷贝，也不等同于带了颜色的文件夹，它给我的感受更像是“如无必要，勿增实体”，形式上易于辨认但又不用改变实体。
 
 ## 显示隐藏文件
 
-开启后Finder显示隐藏的文件
+开启后 Finder 显示隐藏的文件
 
 ```
 defaults write com.apple.finder AppleShowAllFiles true
@@ -93,7 +97,7 @@ killall Finder
 
 ## 活动监视器
 
-Command + Space或单击菜单栏中的放大镜图标以打开Spotlight搜索，键入“活动监视器”，然后按Enter。
+Command + Space 或单击菜单栏中的放大镜图标以打开 Spotlight 搜索，键入“活动监视器”，然后按 Enter。
 
 ![](https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/image-20230601160218009.png)
 
@@ -125,11 +129,11 @@ https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md#13-macos%E7%B3%BB%E7%BB%9F%
 
 ## Typora
 
-Markdown编辑器
+Markdown 编辑器
 
 ## Bob
 
-截图翻译Bob + OpenL插件
+截图翻译 Bob + OpenL 插件
 
 ## 快捷指令
 
@@ -147,22 +151,23 @@ Markdown编辑器
 
 ## Sip
 
-
-
 ## Init
 
 brew,wget,git,zsh,on-my-zsh
 
-
-
 ## 初始化
 
-安装homebrew
+安装 homebrew
+
+安装 go
+
+brew install go
+brew install python
 
 更改光标速度
 
 ![](https://img-blog.csdnimg.cn/055dccceab144a18a3bae2cab37dde8c.png)
 
-打开terminal，更改键盘按键重复速度
+打开 terminal，更改键盘按键重复速度
 
 defaults write NSGloba lDomain KeyRepeat 1

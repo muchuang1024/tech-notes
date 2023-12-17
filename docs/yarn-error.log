@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js install
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.17.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: EACCES: permission denied, unlink '/Users/mc/Code/person/tech-notes/docs/node_modules/@vuepress/core/.temp/app-enhancers/1.js'
+
+npm manifest: 
+  {
+    "name": "vuepress",
+    "version": "0.0.1",
+    "description": "在线文档网站",
+    "main": "index.js",
+    "authors": {
+      "name": "muchuang",
+      "email": "muchuang2023@gmail.com"
+    },
+    "repository": "vuepres/vuepress",
+    "scripts": {
+      "dev": "vuepress dev src",
+      "build": "vuepress build src"
+    },
+    "license": "MIT",
+    "devDependencies": {
+      "vuepress": "^1.5.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

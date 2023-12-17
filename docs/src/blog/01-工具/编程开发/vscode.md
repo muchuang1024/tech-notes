@@ -90,7 +90,9 @@ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 | 插件                              | 功能             | 设置 |
 | --------------------------------- | ---------------- | ---- |
 | Dyno File Utils                   | 新建/重命名文件  |      |
-| CodeGeeX                          | 代码自动补全     |      |
+| CodeGeeX                          | AI 编程          |      |
+| Tabnine AI                        | AI 编程          |      |
+| Continue                          | AI 编程          |      |
 | Open in Finder                    | 使用 Finder 打开 |      |
 | GitLens                           | Git 版本历史     |      |
 | Bracket Pair Colorization Toggler | 括号匹配         |      |
