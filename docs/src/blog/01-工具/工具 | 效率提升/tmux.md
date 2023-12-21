@@ -57,7 +57,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # theme主题
 set -g @plugin 'odedlaz/tmux-onedark-theme'
 
-set -g @onedark_widgets "Go程序员"
+set -g @onedark_widgets "木川"
 set -g @onedark_time_format "%I:%M"
 set -g @onedark_date_format "%m.%d"
 #set -g @onedark_date_format "%m:%d"
