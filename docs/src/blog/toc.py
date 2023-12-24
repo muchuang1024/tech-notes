@@ -3,7 +3,7 @@ import os
 
 def generate_markdown_directory(folder_path, depth=0, base_path=""):
     # 获取当前文件夹下的文件和子文件夹
-    items = os.listdir(folder_path)
+    items = [item for item in os.listdir(folder_path) if item.lower() != "readme.md"]
     toc = ""
 
     for item in sorted(items):
