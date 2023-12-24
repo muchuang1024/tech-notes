@@ -1,44 +1,45 @@
 import os
 
 
-def generate_markdown_from_directory(path):
-    markdown_content = "---\n"
-    for root, dirs, files in os.walk(path):
-        # Skip the root directory itself
-        if root == path:
-            continue
+def generate_markdown_directory(folder_path, depth=0, base_path=""):
+    # 获取当前文件夹下的文件和子文件夹
+    items = os.listdir(folder_path)
+    toc = ""
 
-        # Find the depth of the current directory
-        depth = root[len(path) :].count(os.sep)
+    for item in sorted(items):
+        item_path = os.path.join(folder_path, item)
 
-        # Format the directory name based on the depth
-        if depth == 1:
-            markdown_content += f"# {os.path.basename(root)}\n\n"
-        elif depth == 2:
-            markdown_content += f"## {os.path.basename(root)}\n\n"
+        # 如果是文件夹，递归处理
+        if os.path.isdir(item_path):
+            # 处理文件夹名中的空格和特殊字符并编码
+            folder_name = item.replace(" ", "%20")
+            folder_name = folder_name.replace("#", "%23")
 
-        # Add files as list items
-        for file in files:
-            # Create a relative path to the file
-            rel_path = os.path.relpath(os.path.join(root, file), path)
-            # Replace spaces with %20 for markdown URL encoding
-            rel_path_encoded = rel_path.replace(" ", "%20")
-            # Format based on the depth of the directory
-            if depth == 1:
-                markdown_content += f"### [{file}]({rel_path_encoded})\n"
-            elif depth == 2:
-                markdown_content += f"- [{file}]({rel_path_encoded})\n"
+            # 生成对应层级的Markdown标题
+            toc += f"{'  ' * depth}- [{item}]({base_path}/{folder_name}/README.md)\n"
+            # 递归处理子文件夹
+            toc += generate_markdown_directory(
+                item_path, depth + 1, f"{base_path}/{folder_name}"
+            )
+        # 如果是文件且以.md结尾，直接生成Markdown标题
+        elif os.path.isfile(item_path) and item.endswith(".md"):
+            # 处理文件名中的空格和特殊字符并编码
+            file_name = item.replace(" ", "%20")
+            file_name = file_name.replace("#", "%23")
+            file_path = os.path.join(base_path, file_name)
+            toc += f"{'  ' * depth}- [{item}]({file_path})\n"
 
-    markdown_content += "---\n"
-    return markdown_content.strip()
+    return toc
 
 
-# Set the path to the root of your project directory
-project_path = "./"
+# 指定当前文件夹
+folder_path = "."
 
-# Generate the markdown content
-markdown_content = generate_markdown_from_directory(project_path)
+# 生成Markdown目录
+markdown_directory = generate_markdown_directory(
+    folder_path, 0, os.path.basename(folder_path)
+)
 
-# Output the content to a markdown file
-with open(os.path.join(project_path, "README.md"), "w") as md_file:
-    md_file.write(markdown_content)
+# 生成toc.md文件
+with open("README.md", "w") as toc_file:
+    toc_file.write(markdown_directory)
